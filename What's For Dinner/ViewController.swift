@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var suggestionLabel: UILabel!
+    
     var index = -1
     var imageIndex = -1
     let numberOfImages = 7
@@ -32,6 +34,8 @@ class ViewController: UIViewController {
             "Steak",
             "Salad"]
         
+        let restaurantSuggestions = ["Ooka", "Palermos", "PJ's", "From The Boot", "Umai", "Del Frisco's", "The Turning Point"]
+        
         var newIndex: Int
         
         repeat {
@@ -40,16 +44,8 @@ class ViewController: UIViewController {
         
         index = newIndex
         messageLabel.text = dinnerOptions[index]
-        
-//        repeat {
-//            newIndex = Int.random(in: 0..<dinnerOptions.count)}
-//        while index == newIndex
-//
-//        imageIndex = newIndex
-        
         imageView.image = UIImage(named: "image\(newIndex + 1)")
-        
-        
+        suggestionLabel.text = restaurantSuggestions[index]
     }
     
 }
