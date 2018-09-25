@@ -37,7 +37,6 @@ class ViewController: UIViewController {
         let restaurantSuggestions = ["Ooka", "Palermos", "PJ's", "From The Boot", "Umai", "Del Frisco's", "The Turning Point"]
         
         var newIndex: Int
-        
         repeat {
             newIndex = Int.random(in: 0..<dinnerOptions.count)}
         while index == newIndex
